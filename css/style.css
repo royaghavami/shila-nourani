@@ -486,6 +486,50 @@ html[dir="rtl"] .hero {
   margin-top: var(--space-sm);
 }
 
+/* --- Address page: card + map image --- */
+.address-inner {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: var(--space-xl);
+  flex-wrap: wrap;
+}
+
+.address-inner .address-card {
+  flex: 1;
+  min-width: 300px;
+}
+
+.address-map-link {
+  flex: 0 0 auto;
+  display: block;
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  transition: box-shadow var(--transition);
+}
+
+.address-map-link:hover {
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.15);
+}
+
+.address-map-link img {
+  width: 100%;
+  max-width: 450px;
+  height: auto;
+  display: block;
+  vertical-align: middle;
+}
+
+@media (max-width: 640px) {
+  .address-inner {
+    flex-direction: column;
+  }
+  .address-map-link img {
+    max-width: 100%;
+  }
+}
+
 /* --- Footer --- */
 .site-footer {
   padding: var(--space-lg) 0;
